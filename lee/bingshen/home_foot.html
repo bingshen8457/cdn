@@ -1,0 +1,44 @@
+<script type="text/javascript" src="/js/lunbo.js"></script>
+<script type="text/javascript" src="/baidu/baidu.js"></script>
+<!--页底-->
+<div class="m-box-bottom">
+	<div class="page-c-items">
+		<footer class="m-footer" style="color: #C8C8C8;">
+		<p class="copyRight">本网站不提供影片资源存储，也不参与录制、上传，如本站提供的信息对您造成了侵权，请及时告诉我们，我们将第一时间予以处理，构建和谐网络！</p>
+		  <p class="copyRight">站长邮箱： {maccms:email}</p>
+		  
+		  <p class="copyRight"> {maccms:visits}</p>
+		</footer>
+	</div>
+</div>
+<!--页底end-->
+
+<!--回到顶部-->
+<div class="m-sideBar po-fixed" style="display: none;">
+	<div >
+		<a data-node="nodeLink" href="javascript:scroll(0,0);" class="m-goTop">
+			<i class="c-glyphicon c-glyphicon-arrowUp"></i>
+			<span>顶部</span>
+		</a>
+	</div>
+</div>
+<!--回到顶部end-->
+</div>
+</div>
+<script type="text/javascript" src="{maccms:path_tpl}/js/jquery.lazyload.min.js"></script>
+<script type="text/javascript" src="{maccms:path_tpl}/js/iscroll.js"></script>
+<script type="text/javascript" src="{maccms:path_tpl}/js/app.js"></script>
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>

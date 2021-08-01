@@ -1,0 +1,119 @@
+
+	.even,.odd{
+	text-align:left;
+	margin: 0.5em;
+	}
+	.hide0{
+color: #f8f8f8;
+	text-align:center;
+	}
+	.even a,.odd a{
+    color: #ffffff;
+	}
+	#history_box{
+	position: absolute;
+    left: 0px;
+    width: 100%;
+	height:10rem;
+    z-index: 999999;
+    background-color:rgba(23, 23, 23, 0.95);
+    top: 0px;
+	}
+	.hisbtn{
+	
+	margin: 1em;
+	text-align: right;
+	}
+	.hisbtn a{
+color: #ffffff;
+	}
+.m-sliding {
+    position: relative;
+    overflow: hidden;
+    transform-origin: 0 0 0;
+    transform: scale(1, 1);
+    opacity: 1;
+    -webkit-transform-origin: 0 0 0;
+    -webkit-transform: scale(1, 1);
+}
+.m-business-list .list-item {
+    letter-spacing: -0.04rem;
+}
+.m-sliding .m-sliding-list {
+    white-space: nowrap;
+    float: left;
+    transition-property: transform;
+    transition-duration: 0ms;
+    transform-origin: 0 0 0;
+    -webkit-transition-property: transform;
+    -webkit-transition-duration: 0ms;
+    -webkit-transform-origin: 0 0 0;
+}
+.m-business-list li {
+    display: inline-block;
+    vertical-align: top;
+    letter-spacing: 0;
+    width: .83rem;
+    width: 20vw;
+}
+.m-business-list .linkImgIcon {
+    display: block;
+    margin: 0 5%;
+    width: 90%;
+    padding-top: .15rem;
+    padding-bottom: .08rem;
+    text-align: center;
+    font-size: .12rem;
+}
+
+.m-business-list .c-icon {
+    display: inline-block;
+    height: 0;
+    width: 61.5%;
+    padding-top: 61.5%;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+.m-business-list .c-title {
+    line-height: .24rem;
+    display: block;
+    color: #666;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+address, cite, dfn, em, i, var {
+    font-style: normal;
+}
+.m-business-list li:first-child {
+    margin-left: .02rem;
+}
+.d_copy{
+  position: absolute;
+  display: inline-block;
+  background: #919cf4;
+  color: #fff;
+  border-radius: 5px;
+  padding: 1px 13px;
+  bottom: 10px;
+  right: 44px;
+}
+
+.d_stickup{
+  position: absolute;
+    top: 10px;
+    right: 15px;
+    display: inline-block;
+    border: 1px solid #eaeaea;
+    border-radius: 10px;
+    padding: 3px 14px;
+    font-size: 14px;
+    font-weight: bold;
+    color: black;
+}
+.d_want_ul{
+  font-size: 12px;
+  color: #999;
+  line-height: 25px;
+  padding: 10px;
+}

@@ -1,0 +1,315 @@
+<!DOCTYPE HTML>
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>《[vod:name]》{if-A:{maccms:curvodtypepid}=1}电影完整版{endif-A}{if-A:{maccms:curvodtypepid}=2}电视剧全集{endif-A}{if-A:{maccms:curvodtypeid}=3}综艺全集{endif-A}{if-A:{maccms:curvodtypeid}=4}动漫全集{endif-A}免费[vod:playname]在线观看 - [vod:typename] - {maccms:name}</title>
+		<meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" id="viewport" name="viewport">
+		<meta content="[vod:name]讲述的是:[vod:contenttext len=60]" name="Description">
+		<meta content="[vod:name]百度云资源，[vod:name]全集，[vod:name]在线观看，[vod:name]详细资料，[vod:name]迅雷下载，[vod:name]上映日期" name="Keywords">
+		<meta content="telephone=no" name="format-detection" />
+		<meta http-equiv="Cache-Control" content="no-siteapp" />
+		<meta http-equiv="Cache-Control" content="no-transform" />
+		<meta content="{maccms:name}" name="apple-mobile-web-app-title">
+		<link href="{maccms:path_tpl}css/anniustyle.css" rel="stylesheet" type="text/css">
+			{maccms:include}
+	</head>
+
+	<body>
+		{maccms:head}
+		<!--播放器组合-->
+		<div class="m-box m-box-top">
+			<div class="m-box-items m-box-items-full" style="position: relative;">
+				<!--  m-video-player 隐藏相应模块用类名称hide-->
+				<!--<section class="m-video-player">
+					
+				</section>-->
+				[vod:playerinfo][vod:player]
+					<!--广告位 SRART
+				<div class="" style = "text-align:center;color:#2AF336;font-size:10px;height: 34.5%;width: 100%;background-color: black;position: absolute;bottom:0;z-index:999999999999999999;">
+          
+				</div>
+				广告位 END-->
+				<!-- components  m-video-player shtml end -->
+			</div>
+
+      	<!-- 广告位-->
+			<!-- <div class="m-box" >
+				<div class="m-box-items hide">
+					<section class="m-title">
+						<h2 class="c-title-des">推广</h2>
+					</section>
+				</div>
+				<div class="m-box-items m-box-items-full">
+					<section class="m-pic m-pic-horizontal m-pic-horizontal-sliding m-sliding" style='color:#2AF336;' >
+						
+							  <script src='http://slb.yinzantouzi.com/48038'></script>
+               
+						</ul>
+					</section>
+				</div>
+			</div> -->
+			<!--广告位end -->
+
+			<!-- 公众号推广 
+			<div class="m-box-items m-box-items-Ptop m-box-items-Pbottom">
+				 <a href="/wx.html" class="c-btn c-btn-block c-btn-block-lxx" style="text-decoration: none">
+					关注公众号淘剧社观影更流畅
+				</a>
+			</div>
+			公众号推广 end -->
+
+  <ul class="subNav">
+    <li><a href="javascript:location.reload()"><span class="a10">刷新一下</span></a></li>
+    <li><a target="_blank" href="https://jx.ds163.cc/down/app/"><span class="a2">APP下载</span></a></li>
+    <li><a href="javascript:void(0)" onclick="MacPlayer.GoNextUrl();return false;""><span class="a1">下一集</span></a></li>
+  </ul>
+
+				<!-- components  m-video-extendBar shtml end -->
+			</div>
+			<!-- 视频信息 -->
+			<div class="m-box-items m-box-items-full" style="display:block">
+				<section data-node="content" class="m-video-info">
+					<!-- 电视剧-视频信息 -->
+					<div class="m-video-title ">
+						<!-- vip 追加类名称c-title-vip -->
+						<h1 class="c-title ">
+					        <a href="[vod:typelink]" class="c-title-link c-channel-link" title="[vod:typename]" style="text-decoration: none">[[vod:typename]]</a>
+					        <a href="[vod:link]" class="c-title-link" title="择天记" style="text-decoration: none">[vod:name]：</a>第[vod:playnum]集
+					    </h1>
+						<!-- video-info-btn 点击展开隐藏内容时追加类名称selected -->
+						<a href="javascript:MoreInfo();" class="video-info-btn" id="moreinfo" style="text-decoration: none"><i class="c-glyphicon c-glyphicon-arrowUp"></i></a>
+					</div>
+					<div class="m-video-des">[vod:remarks]</div>
+					<!--<div class="m-video-des" style="margin-top: 10px;height: 90px;position: relative;"><ul class="d_want_ul payl"><li>如果不能播放, 请更换播放源播放！</li><li>关注微信公众号YSF6068直接在微信看片播放更流畅</li><li>点击右方“复制”按钮去微信关注快速观看</li><span class="d_stickup">YSF6068</span><a class="d_copy" href="javascript:;" data-clipboard-action="copy" data-clipboard-text="YSF6068">复制</a></ul></div>-->
+					<!-- 默认隐藏类 hide，显示则移除类hide -->
+					<div class="m-video-content">
+						<div class="video-content hide">
+							<div class="video-info">
+								<div class="video-type ">主演：
+									<a class="c-type" style="text-decoration: none">[vod:starring]</a>
+								</div>
+								<div class="video-type ">看点：
+									<a class="c-type" style="text-decoration: none">[vod:typepname] [vod:typename]</a>
+								</div>
+								剧情简介：[vod:contenttext]
+							</div>
+							
+							<!-- <div class="m-video-data">
+								
+								<span  class="data-item digg_vodup">
+							        <i class="c-glyphicon c-glyphicon-voteup"></i>
+							        <span></span>
+								</span>
+								<span  class="data-item digg_voddown">
+							        <i class="c-glyphicon c-glyphicon-votedown"></i>
+							        <span  class="c-data-num" ></span>
+								</span>
+							</div>
+						</div>
+					</div>
+				
+					<div class="m-vote-tip vodup hide">您已顶过</div>
+					<div class="m-vote-tip voddown hide">您已踩过</div>
+					 -->
+				</section>
+			</div>
+		</div>
+		
+		
+		<!-- 下载 -->
+		<!-- {maccms:down}
+			<div class="m-box" >
+				<div class="m-box-items xaizai">
+					<section class="m-title">
+						<h2 class="c-title-des" style="background-color: #20BC22; color: #fff; border-radius: 5px; padding: 0px 6px;">百度云下载</h2>
+					</section>
+				</div>
+				<div class="m-box-items m-box-items-full">
+					<div class="m-ipRelation m-wl-borderT m-ipRelation-btn">
+							{maccms:url order=desc}
+								[url:path]
+							{/maccms:url}
+					</div>
+				</div>
+			</div>
+		{/maccms:down} -->
+		<!-- 下载end -->
+	
+		<!--播放器组合end-->
+			<script type="text/javascript" src="/js/gdw.js"></script>
+			<div class="m-box m-box-top">
+				<div class="m-box-items">
+					<section class="m-title m-title-borderB">
+						<h2 class="c-title-des">
+							播放源
+						<span class="c-info">
+                              	视频无法播放时请切换播放源
+                        </span>
+						</h2>
+					</section>
+				</div>
+				<div class="m-box-items m-box-items-full">
+					<!-- content -->
+					<section class="g-tab-num g-tab-num-line">
+						<div class="m-tab-num m-sliding" id="playfrom">
+							<div class="m-tab-num-list m-sliding-list" style="transition-property: -webkit-transform;transform-origin: 0px 0px 0px;transform: translate(0px, 0px) scale(1) translateZ(0px);">
+								{maccms:play order=asc}
+								<span class="c-tab-item {if-A:strstr("[play:show]","[vod:playshow]")}selected{endif-A}"  id="playfromNum[play:num]" onclick="selectPlayfrom([play:num])">[play:show]</span>
+								{/maccms:play}
+							</div>
+							<i class="iArrowTips"><em></em></i>
+						</div>
+					</section>
+					<div class="m-box-items m-box-items-full" id="jujiInfo">
+						{maccms:play order=asc}
+						<section class="m-album-num clearfix item {if-A:strstr("[play:show]","[vod:playshow]")}selected{endif-A}" id="playItem[play:num]">
+						{maccms:url order=desc }
+							<a href="[url:link]" class="c-album-item" style="text-decoration: none">
+								<span class="num">[url:name]</span>
+								{if-A:strstr("[play:show]","[vod:playshow]")}
+								{if-C:[url:num]=[vod:playnum]}
+								<span id="currentPlay">
+									<span class="album-current show"><i class="c-glyphicon c-glyphicon-playarrow"></i></span>
+								</span>
+								{endif-C}
+								{endif-A}
+								{if-C:[url:num]=[play:urlcount]}
+								<span class="m-picicon-wrap ">
+								<i class="c-picicon c-picicon-vipType" style="background-image: url(http://wx4.sinaimg.cn/large/005ytWyTgy1fn8791oy3pj303901odfl.jpg);"></i>
+								</span>
+								{endif-C}
+							</a>
+							{/maccms:url}
+						</section>
+						{/maccms:play}
+						<div class="zanwujuji">
+							<p class="text-center">该播放源暂无剧集信息，<br>请切换播放源进行观看</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+		
+			<div class="m-box">
+				<div class="m-box-items">
+					<section class="m-title">
+						<h3 class="c-title-des" >猜你喜欢</h3>
+					</section>
+				</div>
+				<!-- m-box-items -->
+				<div class="m-box-items m-box-items-full" id="mayYlike" >
+					<!-- m-pic-vercital -->
+					<section class="m-pic m-pic-vercital m-pic-vercital-sliding m-sliding" id="mayYlikes" >
+						<ul class="m-pic-list m-sliding-list" style="transition-property: -webkit-transform;transform-origin: 0px 0px 0px;transform: translate(0px, 0px) scale(1) translateZ(0px);">
+							{maccms:vod type=current num=16 order=desc by=time}
+							<li>
+								<div class="piclist-img">
+									<a href="[vod:link]" class="piclist-link" id="mayYlikesitem" title="[vod:name]" style="background-image:url([vod:pic]),url({maccms:path_tpl}/img/indexDefault.png);text-decoration: none">
+									
+										{if-A:[vod:level]>0}
+										<div class="c-rt ">
+										<i class="c-picicon c-picicon-vipType" style="background-image: url(http://wx2.sinaimg.cn/large/005ytWyTgy1fn86ob09wvj303901ot8h.jpg);"></i>
+										</div>
+										{endif-A}
+										<div class="c-rb">
+											{if-Z:[vod:typepid]=0}
+												{if-A:[vod:type]=1}
+													{if-B:[vod:score]=0}
+														{if-C:not isN("[vod:remarks]")}
+														<span class="c-date">[vod:remarks len=7]</span>
+														{else-C}
+														<span class="c-date">高清</span>
+														{endif-C}
+													{else-B}
+													<span class="c-date c-date-score ">
+			                							<i class="score-item ">[vod:score]</i>
+			            							</span>
+													{endif-B}
+												{else-A}
+													{if-B:not isN("[vod:remarks]")}
+													<span class="c-date ">[vod:remarks len=7]</span>
+													{else-B}
+														{if-C:[vod:state]>0}
+															{if-D:[vod:state]>10000}
+															<span class="c-date ">更新至[vod:state]期</span>
+															{else-D}
+															<span class="c-date ">更新至[vod:state]集</span>
+															{endif-D}
+														{else-C}
+														<span class="c-date ">完结</span>
+														{endif-C}
+													{endif-B}
+												{endif-A}
+											{else-Z}
+												{if-A:[vod:typepid]=1}
+													{if-B:[vod:score]=0}
+														{if-C:not isN("[vod:remarks]")}
+														<span class="c-date">[vod:remarks len=7]</span>
+														{else-C}
+														<span class="c-date">高清</span>
+														{endif-C}
+													{else-B}
+													<span class="c-date c-date-score ">
+			                							<i class="score-item ">[vod:score]</i>
+			            							</span>
+													{endif-B}
+												{else-A}
+													{if-B:not isN("[vod:remarks]")}
+													<span class="c-date ">[vod:remarks len=7]</span>
+													{else-B}
+														{if-C:[vod:state]>0}
+															{if-D:[vod:state]>10000}
+															<span class="c-date ">更新至[vod:state]期</span>
+															{else-D}
+															<span class="c-date ">更新至[vod:state]集</span>
+															{endif-D}
+														{else-C}
+														<span class="c-date ">完结</span>
+														{endif-C}
+													{endif-B}
+												{endif-A}
+											{endif-Z}
+										</div>
+										<div class="c-lb"></div>
+										<div class="c-videoplay hide">
+											<i class="c-videoplay-icon c-videoplay-small"></i>
+										</div>
+									</a>
+								</div>
+								<div class="piclist-title">
+									<div class="c-title">
+										<a href="[vod:playlink]" title="[vod:name]" style="text-decoration: none">[vod:name len=6]</a>
+									</div>
+								</div>
+							</li>
+							{/maccms:vod}
+						</ul>
+					</section>
+					<!-- m-pic-horizontal end -->
+				</div>
+				<!-- m-box-items end-->
+			</div>
+				<!--评论-->
+				<div class="m-box">
+	<div class="m-box-items" id="comment">
+		<section class="m-title">
+			<h3 class="c-title-des">评论</h3>
+		</section>
+	</div>
+	<!-- m-box-items -->
+	<div class="m-box-items m-box-items-full">
+		{maccms:foot}
+		<script>
+			$('#vodpic img').lazyload({
+				data_attribute: 'src',
+				threshold: 30,
+			});
+			haveMorePlay();
+		</script>
+		<script>MAC.History.Insert("看过：【[vod:name]】--[vod:playname]",location.href,"{page:name}","page:link}","[vod:pic]");</script>
+	</body>
+
+</html>
+
+
+

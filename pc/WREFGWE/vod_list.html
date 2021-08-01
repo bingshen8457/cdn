@@ -1,0 +1,75 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>好看的{page:name}-最新{page:name}-经典{page:name}-{page:name}电影推荐-第{page:now}页-{maccms:name}</title>
+<meta name="keywords" content="{page:key}" />
+<meta name="description" content="{page:des}" />
+{maccms:include}
+</head><body>
+{maccms:head}
+<!--top-box--end--><div class="list_type"><div  class="list_type_title box"><h2>{page:name}检索</h2><ul class="conbread"></ul><span id="conreset"><a href="#">重新筛选<i class="iconfont">&#xe624;</i></a></span></div><div class="list_type_nav box"><div class="list_type_box"><span>分类：</span><div class="list_type_a">
+
+<a  href="{page:linktype}" {if-A:"{page:pid}"="0"} class="on" {endif-A} target="_self" >全部</a>
+
+{maccms:menu type=auto}
+          <a href="[menu:link]" {if-A:"{page:id}"="[menu:id]"}class="on"{endif-A} data="id-[menu:id]">[menu:name]</a>
+          {/maccms:menu}
+
+</div></div><div class="list_type_box"><span>类型：</span><div class="list_type_a">
+
+<a href="{page:linkclass}" {if-A:"{page:class}"=""}class="on"{endif-A}  target="_self" data="mci
+
+d-0">全部</a>
+
+{maccms:class type=auto}
+          <a href="[class:link]" {if-A:"{page:class}"="[class:name]"}class="on"{endif-A} data="class-[class:name]">[class:name]</a>
+          {/maccms:class}
+
+</div></div><div class="list_type_box"><span>地区：</span><div class="list_type_a">
+
+<a href="{page:linkarea}" {if-A:"{page:area}"=""} class="on" {endif-A} target="_self" data="area-0">全部</a>
+
+{maccms:area type=auto order=asc}
+          <a href="[area:link]" {if-A:"{page:area}"="[area:name]"}class="on"{endif-A} data="area-[area:name]">[area:name]</a>
+          {/maccms:area}
+
+
+</div></div><div class="list_type_box"><span>年代：</span><div class="list_type_a">
+
+
+<a href="{page:linkyear}" {if-A:"{page:year}"=""} class="on" {endif-A}  target="_self" data="year-0">全部</a>
+
+{maccms:year type=auto start=2011 end=2018 order=desc}
+         <a href="[year:link]" {if-A:"{page:year}"="[year:name]"}class="on"{endif-A} data="year-[year:name]">[year:name]</a>
+         {/maccms:year}
+
+
+</div></div><div class="list_type_box no"><span>字母：</span><div class="list_type_a"><a href="{page:linkletter}" {if-A:"{page:letter}"=""} class="on" {endif-A} target="_self" data="letter-0">全部</a>
+
+{maccms:letter type=auto letter=all}
+         <a href="[letter:link]" {if-A:"{page:letter}"="[letter:name]"}class="on"{endif-A} data="letter-[letter:name]">[letter:name]</a>
+         {/maccms:letter}
+
+
+</div></div></div></div><div class="box t20"><div class="list_type_tool">
+
+<a  {if-A:"{page:by}"="time"}class="on" {endif-A} href="{page:linkbytime}"  data="order-addtime"><i class="iconfont">&#xe628;</i>最新</a>
+
+
+<a {if-A:"{page:by}"="curr"} class="on" {endif-A} href="{page:linkbyhits}"data="order-hits"><i class="iconfont">&#xe608;</i>人气</a>
+
+<a  {if-A:"{page:by}"="score"} class="on" {endif-A} href="{page:linkbyscore}"data="order-gold"><i class="iconfont">&#xe630;</i>评分</a>
+
+
+</div><div class="uipages toppage" id="short-page"></div><div  class="list_toppage">全部共<span class="count" id="counts">{page:datacount}</span>部视频</div></div><div class="back-tab boxn box"><ul class="up-list list-img" id="contents">
+{maccms:vod pagesize=30 order=desc by=time}
+<li><a href="[vod:link]" target="_blank"><img class="loading" src="{maccms:path_tpl}public/tpl/zpnew/images/pic.png"  data-original="[vod:pic]" alt="[vod:name]" title="[vod:name]"><label class="qx">{if-A:[vod:state]<1}[vod:remarks]{elseif-A:[vod:state]<1000 and [vod:state]>0}第[vod:state]集{elseif-A:[vod:state]>1000}[vod:state]期{elseif-A:[vod:state]=0 and "[vod:remarks]"=""}大结局{else-A}{endif-A}</label><div class="info"><i class="iconfont">&#xe622;</i></div></a><div class="txt"><h3><a href="[vod:link]" target="_blank">[vod:name]</a></h3><span class="des">[vod:starring] </span></div></li>
+{/maccms:vod}
+
+
+</ul></div><div class="uipages pages box" id="long-page">
+
+{maccms:pages len=6}
+
+</div>
+	 
+  
+{maccms:foot}</body></html>

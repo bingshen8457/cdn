@@ -1,0 +1,222 @@
+<!DOCTYPE HTML>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>好看的{page:name}-2020最新{page:name}-经典{page:name}-{page:name}电影推荐-第{page:now}页-{maccms:name}</title>
+		<meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" id="viewport" name="viewport">
+		<meta content="{page:des}" name="Description">
+		<meta content="{page:key}" name="Keywords">
+		<meta content="telephone=no" name="format-detection" />
+		<meta http-equiv="Cache-Control" content="no-siteapp" />
+		<meta http-equiv="Cache-Control" content="no-transform" />
+		<meta content="{maccms:name}" name="apple-mobile-web-app-title"> {maccms:include}
+		<style>
+			* {
+				box-sizing: none;
+				-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+				-webkit-touch-callout: none;
+			}
+		</style>
+	</head>
+
+	<body>
+		{maccms:head}
+
+		<div class="m-box-items m-box-items-full">
+			<!-- content -->
+			<section class="m-tab-nav">
+				<div class="m-tab-nav-list">
+					<span class="c-tab-item"><a href="?m=vod-type-id-{if-A:{maccms:curvodtypepid}=0}{maccms:curvodtypeid}{else-A}{maccms:curvodtypepid}{endif-A}-pg-1.html">推荐</a></span>
+					<span class="c-tab-item selected"><a href="{page:linkbytime}">片库</a></span>
+				</div>
+			</section>
+			<!-- content end -->
+		</div>
+		
+		<div>
+			<!-- 片库筛选标签 -->
+			<div class="m-box-items m-box-items-full">
+				<section class="m-sortList-wrap m-sliding " id="sort_menu_Sorting">
+					<ul class="m-sortList m-sliding-list">
+						<li>
+							<a href="{page:linkbytime}" class="c-sortlist-item {if-A:"{page:by}"="time"}selected{endif-A}">新上线</a>
+						</li>
+						<li>
+							<a href="{page:linkbyhits}" class="c-sortlist-item {if-A:"{page:by}"="hits"}selected{endif-A}">热播榜</a>
+						</li>
+						<li>
+							<a href="{page:linkbyscore}" class="c-sortlist-item {if-A:"{page:by}"="score"}selected{endif-A}">好评榜</a>
+						</li>
+					</ul>
+				</section>
+				<section class="m-sortList-wrap m-sliding " id="sort_menu_type">
+					<ul class="m-sortList m-sliding-list">
+						<li>
+							<a href="javascript:alltype();" class="c-sortlist-item {if-A:"{maccms:curvodtypepid}"="0"}selected{endif-A}" data="menu-0">全部类型</a>
+							<span id="curvodtypepid" 
+							data-curpid= "{if-A:{maccms:curvodtypepid}=0}{maccms:curvodtypeid}{else-A}{maccms:curvodtypepid}{endif-A}"
+							 style="display: none;">
+							</span>
+						</li>
+						{maccms:menu type=auto}
+				      	<li>
+							<a href="[menu:link]" class="c-sortlist-item {if-A:"{page:id}"="[menu:id]"}selected{endif-A} data="menu-[menu:name]">[menu:name]</a>
+						</li>
+				      	{/maccms:menu}
+					</ul>
+				</section>
+				<section class="m-sortList-wrap m-sliding " id="sort_menu_area">
+					<ul class="m-sortList m-sliding-list">
+						<li>
+							<a href="{page:linkarea}" class="c-sortlist-item {if-A:"{page:area}"=""}selected{endif-A}" data="area-0">全部地区</a>
+						</li>
+						{maccms:area type=auto order=asc}
+						<li>
+							<a href="[area:link]" class="c-sortlist-item {if-A:"{page:area}"="[area:name]"}selected{endif-A}" data="area-[area:name]">[area:name]</a>
+						</li>
+				      	{/maccms:area}
+						</ul>
+				</section>
+				
+				<section class="m-sortList-wrap m-sliding " id="sort_menu_year">
+					<ul class="m-sortList m-sliding-list">
+						<li>
+							<a href="{page:linkyear}" class="c-sortlist-item {if-A:"{page:year}"=""}selected{endif-A}" data="year-0">全部年份</a>
+						</li>
+						{maccms:year type=auto start=2005 end=2020 order=desc}
+				      	<li>
+							<a href="[year:link]" class="c-sortlist-item {if-A:"{page:year}"="[year:name]"}selected{endif-A}" data="year-[year:name]">[year:name]</a>
+						</li>
+				      	{/maccms:year}
+					</ul>
+				</section>
+				
+
+			</div>
+			
+			<section class="m-pic  anim-change hide" id="noResult">
+				<div style="padding: 90px 0;color:#999;line-height:.2rem">
+					<p class="text-center">暂无对应的筛选结果，请尝试其他类型，<br>或使用搜索找您喜欢的内容。</p>
+				</div>
+			</section>
+			<!--搜索筛选结果-->
+			<div class="m-box m-box-Ptop">
+				<div class="m-box-items" id="sortResDiv">
+					<section class="m-pic m-pic-vercital" id="sortResSec">
+						<ul class="m-pic-list" id="sortResult">
+							{maccms:vod pagesize=21 order=desc by=time }
+							<li>
+								<div>
+									<div class="piclist-img ">
+										<a title="[vod:name] " href="[vod:link] " class="piclist-link ">
+											<img data-src="[vod:pic] " src="{maccms:path_tpl}/img/indexDefault.png " alt=" " />
+											{if-A:[vod:level]>0}
+											<div class="c-rt ">
+												<i class="c-picicon c-picicon-vipType" style="background-image: url(http://wx2.sinaimg.cn/large/005ytWyTgy1fn86ob09wvj303901ot8h.jpg);"></i>
+											</div>
+											{endif-A}
+											<div class="c-rb ">
+												{if-Z:[vod:typepid]=0}
+													{if-A:[vod:type]=1}
+														{if-B:[vod:score]=0}
+															{if-C:not isN("[vod:remarks]")}
+															<span class="c-date">[vod:remarks len=12]</span>
+															{else-C}
+															<span class="c-date">高清</span>
+															{endif-C}
+														{else-B}
+														<span class="c-date c-date-score ">
+				                							<i class="score-item ">[vod:score]</i>
+				            							</span>
+														{endif-B}
+													{else-A}
+														{if-B:not isN("[vod:remarks]")}
+														<span class="c-date ">[vod:remarks len=12]</span>
+														{else-B}
+															{if-C:[vod:state]>0}
+																{if-D:[vod:state]>10000}
+																<span class="c-date ">更新至[vod:state]期</span>
+																{else-D}
+																<span class="c-date ">更新至[vod:state]集</span>
+																{endif-D}
+															{else-C}
+															<span class="c-date ">完结</span>
+															{endif-C}
+														{endif-B}
+													{endif-A}
+												{else-Z}
+													{if-A:[vod:typepid]=1}
+														{if-B:[vod:score]=0}
+															{if-C:not isN("[vod:remarks]")}
+															<span class="c-date">[vod:remarks len=12]</span>
+															{else-C}
+															<span class="c-date">高清</span>
+															{endif-C}
+														{else-B}
+														<span class="c-date c-date-score ">
+				                							<i class="score-item ">[vod:score]</i>
+				            							</span>
+														{endif-B}
+													{else-A}
+														{if-B:not isN("[vod:remarks]")}
+														<span class="c-date ">[vod:remarks len=12]</span>
+														{else-B}
+															{if-C:[vod:state]>0}
+																{if-D:[vod:state]>10000}
+																<span class="c-date ">更新至[vod:state]期</span>
+																{else-D}
+																<span class="c-date ">更新至[vod:state]集</span>
+																{endif-D}
+															{else-C}
+															<span class="c-date ">完结</span>
+															{endif-C}
+														{endif-B}
+													{endif-A}
+												{endif-Z}
+											</div>
+										</a>
+									</div>
+									<div class="piclist-title ">
+										<div class="c-title ">
+											<a href="[vod:link] " title="[vod:name] ">
+												[vod:name]
+											</a>
+										</div>
+									</div>
+								</div>
+							</li>
+							{/maccms:vod}
+						</ul>
+					</section>
+					
+				</div>
+				<!--搜索筛选结果end-->
+				<div class="m-box m-box-Ptop" id="loadmore">
+					<div class="m-box-items" data-node="lib_box">
+						<section class="m-pic  anim-change m-pic-vercital" data-node="lib_wrap"></section>
+					</div>
+					<section class="m-linkMore" data-node="next_wrapper">
+						<a href="javascript:loadMor();" class="m-link" title="点击加载更多" data-node="next">点击加载更多 </a>
+					</section>
+				</div>
+			</div>
+		</div>
+
+		{maccms:foot}
+		<div id="data" style="display: none;">
+			<iframe id="dataIframe" name="dataIframe" src=""></iframe>
+			 <span id="fenyedata">
+			 	{maccms:pages len=0}
+			 </span>
+		</div>
+		<script>
+			$('img').lazyload({
+				data_attribute: 'src',
+				threshold: 30,
+			});
+		</script>
+		<script type="text/javascript " src="{maccms:path_tpl}js/index.js "></script>
+	</body>
+
+</html>

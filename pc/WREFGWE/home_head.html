@@ -1,0 +1,123 @@
+<div class="top-boxs"><div  class="header">
+<div class="logo"><h1><a href="{maccms:path}" class="logo" title="{maccms:name}"><img src="{maccms:path_tpl}public/tpl/zpnew/images/logo.png" alt="TV6"></a></h1></div><ul class="nav"><li class="home on"><a target="_self" href="{maccms:path}"><i class="iconfont">&#xe64b;</i></a></li>
+{maccms:menu type=1,2,3,4,22 order=asc table=vod}
+<li ><a href="[menu:link]" title="[menu:name]" target="_self">[menu:name]</a></li>
+{/maccms:menu}<li ><a href="{maccms:getlink top.html}" title="榜单" target="_self">榜单</a></li><li ><a href="{maccms:getlink new.html}" title="最新" target="_self">最新</a></li>
+<li class="more">更多</li></ul><!--nav--end--><div class="saerch">
+<form method="post" action="{maccms:link_search_vod}"><input type="text" id="wd" name="wd" class="search-input" value="输入影片片名或演员名称。" onfocus="if(this.value=='输入影片片名或演员名称。'){this.value='';}" onblur="if(this.value==''){this.value='输入影片片名或演员名称。';};" autocomplete="off"/><a class="search-top" href="{maccms:getlink top.html}" target="_blank"></a><input type="submit" id="btn"  class="search-button" value="" /></form>
+<div class="search-list"><div class="search-list-left">
+<ul id="search-list-ul"></ul></div>
+<div class="search-list-right" id="slr-inner">
+</div></div><!--search-list--></div>
+<!--saerch--end--><div class="header_r"><a class="recor">
+<i class="iconfont">&#xe655;</i>观看记录</a><div class="watch-list">
+<div class="watch-list-inner"></div><p><a rel="nofollow" class="close-his" target="_self" href="javascript:;">关闭</a>
+<a rel="nofollow" href="javascript:;" id="emptybt" data="1" target="_self">清空全部播放记录</a>
+</p><ul class="watch-list-ul" id="playhistory"></ul>
+<div class="his-todo" id="morelog" style="display:none;">
+</div><div class="his-todo" id="his-todo">
+</div><script type="text/javascript">PlayHistoryObj.viewPlayHistory('playhistory');</script></div><!--watch-list-->
+		  {if-A:{maccms:username}!=''}
+<a class="login" href="{maccms:path}index.php?m=user-index.html" rel="nofollow"><i class="iconfont">&#xe653;</i>{maccms:username}</a>
+		  {else-A}<a class="login" id="loginbarx" id="innermsg" _hover-ignore="1"><i class="iconfont">&#xe653;</i>登录</a>{else-A}{endif-A}
+</div>
+<!--header_r--end--></div><!--header--end--></div>
+<div class="nav_more"><ul>
+{maccms:menu type=20,12,14,15,5,6,7,8,9,10,11,16,17}
+<li ><a href="[menu:link]" title="[menu:name]" target="_self">[menu:name]</a></li>{/maccms:menu}
+</ul></div><!--top-box--end--></div><!--m-header--end--><!--top-box--end-->
+		<div class="layer"></div>
+		<div id="globalAd">
+			<div id='hero-img' style="background-color: #1a95ff;background: linear-gradient(to left, #5dadf3 0, #4583ca 100%);">
+			</div>
+			<div id='profile-img'>
+				<img src="https://img14.360buyimg.com/ddimg/jfs/t1/157338/21/11172/50850/6045eb68E05703836/b44f59e88fc1c70b.jpg" />
+			</div>
+			<div id='content'>
+				<p style="font-size: 16px;font-weight: bold;">重要公告</p>
+				<p>网站随时会关闭请务必尽快安装APP</p>
+				<p>APP更新快,资源全,播放快,全免费</p>
+				<p>牢记本站网址：tiancai123.cc</p>
+				<a onclick="closeGlobalAd();" class="btn btn-default" rel='nofollow'>朕已阅</a>
+				<a href="https://jx.ds163.cc/down/app/" onclick="redirectUrlToActive();" class="btn btn-default" rel='nofollow'>点击下载APP</a>
+			</div>
+		</div>
+
+		<script>
+			jQuery.cookie = function(name, value, options) {
+				if(typeof value != 'undefined') {
+					options = options || {};
+					if(value === null) {
+						value = '';
+						options.expires = -1;
+					}
+					var expires = '';
+					if(options.expires && (typeof options.expires == 'number' || options.expires.toUTCString)) {
+						var date;
+						if(typeof options.expires == 'number') {
+							date = new Date();
+							var totalTime = 24 * 3600;
+							var hour = date.getHours();
+							var minutes = date.getMinutes();
+							var seconds = date.getSeconds();
+							var pastTime = 3600 * hour + 60 * minutes + seconds;
+							var leftTime = totalTime - pastTime;
+							date.setTime(date.getTime() + (options.expires * leftTime * 1000));
+						} else {
+							date = options.expires;
+						}
+						expires = '; expires=' + date.toUTCString();
+					}
+					var path = options.path ? '; path=' + (options.path) : '';
+					var domain = options.domain ? '; domain=' + (options.domain) : '';
+					var secure = options.secure ? '; secure' : '';
+					document.cookie = [name, '=', encodeURIComponent(value), expires, path, domain, secure].join('');
+				} else {
+					var cookieValue = null;
+					if(document.cookie && document.cookie != '') {
+						var cookies = document.cookie.split(';');
+						for(var i = 0; i < cookies.length; i++) {
+							var cookie = jQuery.trim(cookies[i]);
+							if(cookie.substring(0, name.length + 1) == (name + '=')) {
+								cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+								break;
+							}
+						}
+					}
+					return cookieValue;
+				}
+			};
+			$(function() {
+				var COOKIE_NAME = "erdangjiade";
+				if($.cookie(COOKIE_NAME)) {
+					$(".layer").hide();
+					$("#globalAd").hide();
+				} else {
+					var erdangjiadeH = $(window).height();
+					var erdangjiadeW = $(window).width();
+					$(".layer").show();
+					$("#globalAd").css({
+						'top': erdangjiadeH / 2 - $("#globalAd").height() / 2,
+						'left': erdangjiadeW / 2 - $("#globalAd").width() / 2
+					});
+					$("#globalAd").slideDown(300, function() {
+						setTimeout("closeGloableAd()", '300000');
+					});
+					$.cookie(COOKIE_NAME, "erdangjiade", {
+						path: '/',
+						expires: 1
+					});
+				}
+			});
+
+			function closeGlobalAd() {
+				$('#globalAd').hide();
+				$('.layer').hide();
+
+			}
+
+			function redirectUrlToActive() {
+				$('#globalAd').hide();
+				$('.layer').hide();
+			}
+		</script>

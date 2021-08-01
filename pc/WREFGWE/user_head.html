@@ -1,0 +1,42 @@
+<!-- 头部 -->
+<div class="detail_title">
+	<div class="width1200">
+		<h1><a href="{maccms:path}"></a></h1>
+        <div class="detail_submit">
+        	<form name="search_form" action="{maccms:link_search_vod}" method="post">
+        	<input type="text" placeholder="请输入搜索关键字" id="wd" name="wd" value=""/>
+            <input type="submit" value=""/>
+            </form>
+        </div>
+		
+        <ul>
+		
+		{if-K:"{maccms:usergroupid}"=""}
+		<form id="loginform_web" method="post" action="index.php?m=user-check.html">
+		 <input id="flag" name="flag" type="hidden" value="center">	        	<li>
+            	<input type="text" id="u_name" name="u_name" placeholder="帐号/用户名" />
+            </li>
+        	<li>
+            	<input type="password" id="u_password" name="u_password" placeholder="密码" />
+            </li>
+            <li><input type="submit" id="btnLogin" name="ajaxLogin" value="登录" /></li>	
+      
+          <li><input type="button" onclick="window.location.href='{maccms:path}index.php?m=user-reg.html';" value="立即注册" /></li>
+            <li><div class="ajaxsub"></div></li>
+			            
+                        <li><a href="{maccms:link_gbook}" target="_blank">· {maccms:name}-广告合作</a></li>
+		 </form>
+		
+		{else-K}
+			<li style="margin-right:10px;"><a href="{maccms:path}index.php?m=user-index.html">用户名：{maccms:username}</a></li>
+            	<li style="margin-right:10px;"><a href="{maccms:path}index.php?m=user-index.html">会员中心</a></li>
+            	            	            	<li><a href="{maccms:path}index.php?m=user-logout.html">退出登陆</a></li>
+                         <li><a href="{maccms:link_gbook}" target="_blank">· {maccms:name}-广告合作</a></li>
+			{endif-K}
+			
+
+        </ul>
+    </div>
+</div>
+
+<!-- 头部 -->

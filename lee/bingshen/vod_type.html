@@ -1,0 +1,351 @@
+<!DOCTYPE HTML>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>好看的{page:name}-2020最新{page:name}-经典的{page:name}-{maccms:name}</title>
+		<meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" id="viewport" name="viewport">
+		<meta content="{page:des}" name="Description">
+		<meta content="{page:key}" name="Keywords">
+		<meta content="telephone=no" name="format-detection" />
+		<meta http-equiv="Cache-Control" content="no-siteapp" />
+		<meta http-equiv="Cache-Control" content="no-transform" />
+		<meta content="{maccms:name}" name="apple-mobile-web-app-title">
+			{maccms:include}
+		<script>
+			function nofind(e) {
+				return e.src = 'maccms:path_tpl}/images/focusDefault.jpg';
+			}
+		</script>
+	</head>
+
+	<body>
+		{maccms:head}
+		<!--视频分类-->
+		<div class="m-box-items m-box-items-full">
+			<!-- content -->
+			<section class="m-tab-nav">
+				<div class="m-tab-nav-list">
+					<span class="c-tab-item selected"><a href="?m=vod-type-id-{maccms:curvodtypeid}-pg-1.html">推荐</a></span>
+					<span class="c-tab-item"><a href="{page:linkbytime}">片库</a></span>
+				</div>
+			</section>
+			<!-- content end -->
+		</div>
+		<!-- m-box-items end-->
+		<!-- components m-tab-nav shtml end-->
+		<div class="">
+			<div>
+				{maccms:matrix type={maccms:curvodtypeid} table=vod}
+				<div class="m-box m-box-top m-box-bottom" id="topFocus">
+					<!-- 焦点图 开始 -->
+					<div class="m-box-items">
+						<!-- m-carousel -->
+						<section class="m-carousel">
+							<div class="carousel-box">
+								<ul class="list-carousel" id="focusUl">
+									{maccms:vod num=6 start=1 table=vod type=[matrix:id] by=level level=1 order=desc}
+										<li {if-A:[vod:numjoin]=1}class="selected" style="left: 0;" {endif-A} ">
+											<a href="[vod:link] " title="[vod:contenttext len=14] " style="background-image:url([vod:picslide]),url({maccms:path_tpl}img/focusDefault.png); ">
+												{if-A:[vod:level]>0}
+													<div class="c-rt ">
+														<i class="c-picicon c-picicon-vipType" style="background-image: url(http://wx2.sinaimg.cn/large/005ytWyTgy1fn86ob09wvj303901ot8h.jpg);"></i>
+													</div>
+												{endif-A}
+												<div class="c-rb ">
+													{if-A:[matrix:id]=1}
+														{if-B:[vod:score]=0}
+															{if-C:not isN("[vod:remarks]")}
+															<span class="c-date">[vod:remarks len=10]</span>
+															{else-C}
+															<span class="c-date">高清</span>
+															{endif-C}
+														{else-B}
+														<span class="c-date c-date-score ">
+				                							<i class="score-item ">[vod:score]</i>
+				            							</span>
+														{endif-B}
+													{else-A}
+														{if-B:not isN("[vod:remarks]")}
+														<span class="c-date ">[vod:remarks len=10]</span>
+														{else-B}
+															{if-C:[vod:state]>0}
+																{if-D:[vod:state]>10000}
+																<span class="c-date ">更新至[vod:state]期</span>
+																{else-D}
+																<span class="c-date ">更新至[vod:state]集</span>
+																{endif-D}
+															{else-C}
+															<span class="c-date ">完结</span>
+															{endif-C}
+														{endif-B}
+													{endif-A}
+												</div>
+											</a>
+										</li>
+									{/maccms:vod}
+								</ul>
+									<div class="carousel-dot ">
+										<div class="dot-inner ">
+											{maccms:vod num=6 start=1 table=vod type=[matrix:id] by=level level=1 order=desc}
+											<i {if-A:[vod:numjoin]=1}class="dot-item selected "{else-A}class="dot-item "{endif-A}></i>
+											{/maccms:vod}
+										</div>
+									</div>
+								</div>
+								<div class="carousel-title ">
+									{maccms:vod num=6 start=1 table=vod type=[matrix:id] by=level level=1 order=desc}
+									<h2 {if-A:[vod:numjoin]=1}class="c-title selected "{else-A}class="c-title "{endif-A}>
+										<a href="[vod:link] " title="[vod:contenttext len=14] ">[vod:name len=14]</a>
+									</h2>
+									{/maccms:vod}
+								</div>
+						</section>
+					</div>
+					<!-- 焦点图 结束 -->
+				</div>
+					<!-- 编辑推荐 -->
+				<div class="m-box m-box-top ">
+					<!-- 列表 -->
+					<div class="m-box-items ">
+						<section class="m-pic m-pic-horizontal ">
+							<ul class="m-pic-list ">
+								{maccms:vod num=2 start=1 table=vod type=[matrix:id] by=level level=3 order=desc}
+								<li>
+									<div >
+										<div class="piclist-img ">
+											<a title="[vod:name] " href="[vod:link] " class="piclist-link ">
+												<img src="[vod:pic] " />
+												<div class="c-rb ">
+													{if-A:[matrix:id]=1}
+														{if-B:[vod:score]=0}
+															{if-C:not isN("[vod:remarks]")}
+															<span class="c-date">[vod:remarks len=10]</span>
+															{else-C}
+															<span class="c-date">高清</span>
+															{endif-C}
+														{else-B}
+														<span class="c-date c-date-score ">
+				                							<i class="score-item ">[vod:score]</i>
+				            							</span>
+														{endif-B}
+													{else-A}
+														{if-B:not isN("[vod:remarks]")}
+														<span class="c-date ">[vod:remarks len=10]</span>
+														{else-B}
+															{if-C:[vod:state]>0}
+																{if-D:[vod:state]>10000}
+																<span class="c-date ">更新至[vod:state]期</span>
+																{else-D}
+																<span class="c-date ">更新至[vod:state]集</span>
+																{endif-D}
+															{else-C}
+															<span class="c-date ">完结</span>
+															{endif-C}
+														{endif-B}
+													{endif-A}
+												</div>
+											</a>
+										</div>
+										<div class="piclist-title ">
+											<div class="c-title ">
+												<a href="[vod:link] " title="[vod:name] ">[vod:name len=10]</a>
+											</div>
+										</div>
+									</div>
+								</li>
+								{/maccms:vod}
+							</ul>
+						</section>
+					</div>
+				</div>
+				<!--最新热门-->
+				<div class="m-box">
+					<!-- 标题 -->
+					<div class="m-box-items">
+						<section class="m-title">
+							<h3 class="c-title-des">最近更新</h3>
+							<!--<a href="[menu:link] " class="m-link ">更多 <i class="c-glyphicon c-glyphicon-more "></i> </a>-->
+						</section>
+					</div>
+					<!-- 列表 -->
+					<div class="m-box-items">
+						<section class="m-pic m-pic-vercital">
+							<ul class="m-pic-list">
+								{maccms:vod num=6 by=time type=[matrix:id] order=desc}
+								<li>
+									<div>
+										<div class="piclist-img ">
+											<a title="[vod:name] " href="[vod:link] " class="piclist-link ">
+												<img data-src="[vod:pic] " src="{maccms:path_tpl}/img/indexDefault.png " alt=" " />
+												{if-A:[vod:level]>0}
+												<div class="c-rt ">
+													<i class="c-picicon c-picicon-vipType" style="background-image: url(http://wx2.sinaimg.cn/large/005ytWyTgy1fn86ob09wvj303901ot8h.jpg);"></i>
+												</div>
+												{endif-A}
+												<div class="c-rb ">
+													{if-A:[matrix:id]=1}
+														{if-B:[vod:score]=0}
+															{if-C:not isN("[vod:remarks]")}
+															<span class="c-date">[vod:remarks len=10]</span>
+															{else-C}
+															<span class="c-date">高清</span>
+															{endif-C}
+														{else-B}
+														<span class="c-date c-date-score ">
+				                							<i class="score-item ">[vod:score]</i>
+				            							</span>
+														{endif-B}
+													{else-A}
+														{if-B:not isN("[vod:remarks]")}
+														<span class="c-date ">[vod:remarks len=10]</span>
+														{else-B}
+															{if-C:[vod:state]>0}
+																{if-D:[vod:state]>10000}
+																<span class="c-date ">更新至[vod:state]期</span>
+																{else-D}
+																<span class="c-date ">更新至[vod:state]集</span>
+																{endif-D}
+															{else-C}
+															<span class="c-date ">完结</span>
+															{endif-C}
+														{endif-B}
+													{endif-A}
+												</div>
+											</a>
+										</div>
+										<div class="piclist-title ">
+											<div class="c-title ">
+												<a href="[vod:link] " title="[vod:name] ">
+													[vod:name]
+												</a>
+											</div>
+										</div>
+									</div>
+								</li>
+								{/maccms:vod}
+							</ul>
+						</section>
+					</div>
+				</div>
+				<!--最新热门-->
+				{/maccms:matrix}
+				
+				 <!-- 二级分类 begin-->
+			    {maccms:menu type=auto order=asc by=id table=vod}
+			    <div class="m-box">
+					<!-- 标题 -->
+					<div class="m-box-items">
+						<section class="m-title">
+							<h3 class="c-title-des">[menu:name]</h3>
+							<a href="[menu:link] " class="m-link ">更多 <i class="c-glyphicon c-glyphicon-more "></i> </a>
+						</section>
+					</div>
+					<!-- 列表 -->
+					<div class="m-box-items">
+						<section class="m-pic m-pic-vercital">
+							<ul class="m-pic-list">
+								{maccms:vod num=6 by=time type=[menu:id] order=desc}
+								<li>
+									<div>
+										<div class="piclist-img ">
+											<a title="[vod:name] " href="[vod:link] " class="piclist-link ">
+												<img data-src="[vod:pic] " src="{maccms:path_tpl}/img/indexDefault.png " alt=" " />
+												{if-A:[vod:level]>0}
+												<div class="c-rt ">
+												<i class="c-picicon c-picicon-vipType" style="background-image: url(http://wx2.sinaimg.cn/large/005ytWyTgy1fn86ob09wvj303901ot8h.jpg);"></i>
+												</div>
+												{endif-A}
+												<div class="c-rb ">
+													{if-A:[menu:pid]=1}
+														{if-B:[vod:score]=0}
+															{if-C:not isN("[vod:remarks]")}
+															<span class="c-date">[vod:remarks len=10]</span>
+															{else-C}
+															<span class="c-date">高清</span>
+															{endif-C}
+														{else-B}
+														<span class="c-date c-date-score ">
+				                							<i class="score-item ">[vod:score]</i>
+				            							</span>
+														{endif-B}
+													{else-A}
+														{if-B:not isN("[vod:remarks]")}
+														<span class="c-date ">[vod:remarks len=10]</span>
+														{else-B}
+															{if-C:[vod:state]>0}
+																{if-D:[vod:state]>10000}
+																<span class="c-date ">更新至[vod:state]期</span>
+																{else-D}
+																<span class="c-date ">更新至[vod:state]集</span>
+																{endif-D}
+															{else-C}
+															<span class="c-date ">完结</span>
+															{endif-C}
+														{endif-B}
+													{endif-A}
+												</div>
+											</a>
+										</div>
+										<div class="piclist-title ">
+											<div class="c-title ">
+												<a href="[vod:link] " title="[vod:name] ">
+													[vod:name]
+												</a>
+											</div>
+										</div>
+									</div>
+								</li>
+								{/maccms:vod}
+							</ul>
+						</section>
+					</div>
+				</div>
+			    {/maccms:menu}
+			    <!-- 二级分类 end-->
+				
+			</div>
+		</div>
+				
+			
+				
+		<!--底部广告位-->
+		<div class="m-box ">
+			<div class="m-box-items " >
+				<section class="m-title ">
+					<i class="c-channelicon c-channel-yingyong "></i>
+					<h3 class="c-title-des ">应用推荐</h3>
+				</section>
+				<ul data-node="container " class="m-list-app ">
+					<li>
+						
+					</li>
+					<li>
+						
+					</li>
+					<li>
+						
+					</li>
+					<li>
+						
+					</li>
+				</ul>
+			</div>
+			<div class="m-box-items m-box-items-full ">
+				<!-- m-linkMore -->
+				<section class="m-linkMore ">
+					<a href=" " class="m-link ">
+						更多应用
+						<!--<i class="c-glyphicon c-glyphicon-more "></i>-->
+					</a>
+				</section>
+				<!-- components m-linkMore shtml end -->
+			</div>
+		</div>
+		<!--广告位结束-->
+	<!--视频分类end-->	
+{maccms:foot}
+
+<script type="text/javascript " src="{maccms:path_tpl}js/index.js "></script>
+</body>
+</html>

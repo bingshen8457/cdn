@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>[art:name] [art:subname] - {maccms:name}</title>
+<meta name="keywords" content="[art:name],{maccms:name}" />
+<meta name="description" content="[art:name],{maccms:name}" />
+{maccms:include}
+</head><body>
+{maccms:head}
+<div class="box position t5 mb5" style="text-align:right"><a href="/"><i class="iconfont">&#xe64d;</i>首页</a><i class="iconfont">&#xe650;</i>[art:typepname] </div><div class="vod" style="margin-top:0;"><div class="boxn"><h1 class="articleh1">[art:name]</h1><div class="w920 fn-left article"><div class="article-top"><span>更新日期：[art:time]</span><span>阅读：[art:hits]次</span><span>编辑：</span><span>来源：<a href="http://www.m1938.com" target="_blank">m1938</a></span><div class="fn-right qrcode"><div class="qr-code-ico"><i class="iconfont">&#xe62d;</i></div><div class="qr-code"><div class="qr-code-box"><div id="ncode"></div></div><p>手机扫一扫轻松观看</p><p><em>剧情</em></p></div><div class="bdsharebuttonbox" data-tag="share_1"><p class="els-ico" id="hony-share-services"><i class="iconfont"><a rel="nofollow" class="s-sina" data-cmd="tsina">&#xe62e;</a></i><i class="iconfont"><a rel="nofollow" class="s-qzone" data-cmd="qzone">&#xe62b;</a></i><i class="iconfont"><a rel="nofollow" class="s-weixin" data-cmd="weixin">&#xe627;</a></i><i class="iconfont"><a rel="nofollow" class="s-qq" data-cmd="sqq">&#xe62a;</a></i><i class="iconfont"><a rel="nofollow" class="bds_more" data-cmd="more">&#xe631;</a></i></p></div><script>window._bd_share_config = {common : {bdText : '',bdDesc : '',bdUrl : 'http://www.m1938.com', bdPic : '[art:pic]'},share : [{"bdSize" :4}]} 
+with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];
+</script></div></div><div class="remark clear">[art:content]</div><div class="arcitle-page"><span>上一篇：[art:prelink]</span><span>下一篇：[art:nextlink]</span></div><div class="wx920 fn-left"><script type="text/javascript">var Cm='ture';</script><div class="comtitle"><h3>评论</h3><div class="com"></div></div><div class="ui-cnt clear"><!--m1938.com-PC版-->
+<div id="SOHUCS" sid="[vod:id]"></div>
+<script charset="utf-8" type="text/javascript" src="https://changyan.sohu.com/upload/changyan.js" ></script>
+<script type="text/javascript">
+window.changyan.api.config({
+appid: 'cyrWcQ8bT',
+conf: 'prod_634195f5a6b09715ad8dcb33bede6cdd'
+});
+</script></div></div></div><div class="w260 fn-right"><div class="title ont"><h2>热门新闻</h2><a href="/yulexinwen/" target="_blank" title="新闻" class="more">更多<i class="iconfont">&#xe61f;</i></a></div><ul class="news-rank pb10">
+
+{maccms:art num=1 order=desc by=time type=1}
+<li class="top1"><a href="[art:link]" target="_blank"><img class="loading" src="{maccms:path_tpl}public/tpl/zpnew/images/pic.png"  data-original="[art:pic]" alt="[art:name]" title="[art:name]"><div class="masktxt"><em>★</em><span>[art:name]</span></div></a></li>{/maccms:art}
+{maccms:art num=8 order=desc by=time type=1 start=2}
+<li><a href="[art:link]" title="[art:name]" target="_blank"><em>[art:numjoin]</em><span>[art:name]</span></a></li>{/maccms:art}</ul><div class="title ont"><h2>热门明星</h2><a href="#" target="_blank" title="热门明星" class="more">更多<i class="iconfont">&#xe61f;</i></a></div><div class="back-tab"><ul class="star-r-list" id="mx">
+
+{maccms:topic num=1 id=1 table=vod}
+<li id="mx1" onmouseover="setTab('mx',1,3);" class="current">
+<a href="[topic:link]" target="_blank" class="aPic"><img src="[topic:pic]" alt="[topic:name]" title="[topic:name]" width="68" height="92"></a><h3>[topic:name]</h3><em class="shangbiao"></em></li>{/maccms:topic}
+<li id="mx2" {maccms:topic num=1 id=2 table=vod}onmouseover="setTab('mx',2,3);" ><a href="[topic:link]" target="_blank" class="aPic"><img src="[topic:pic]" alt="[topic:name]" title="[topic:name]" width="68" height="92"></a><h3>[topic:name]</h3><em class="shangbiao"></em></li>
+{/maccms:topic}{maccms:topic num=1 id=3 table=vod}
+<li id="mx3" onmouseover="setTab('mx',3,3);" ><a href="[topic:link]" target="_blank" class="aPic"><img src="[topic:pic]" alt="[topic:name]" title="[topic:name]" width="68" height="92"></a><h3>[topic:name]</h3><em class="shangbiao"></em></li>{/maccms:topic}
+</ul><ul class="star-r-m-list list-img" style="display:block" id="con_mx_1">
+{maccms:vod num=2 order=desc by=hits type=2}
+<li class="imglist">
+<a href="[vod:link]" target="_blank"><img class="lazy" src="[vod:pic]" alt="[vod:name]"  title="[vod:name]"><div class="info"><i class="iconfont">&#xe622;</i></div></a><h3 class="mh3"><a href="[vod:link]" target="_blank">[vod:name]</a></h3></li>{/maccms:vod}
+
+</ul><ul class="star-r-m-list list-img"  id="con_mx_2">
+
+{maccms:vod num=2 order=desc by=hits type=2 start=3}
+<li class="imglist">
+<a href="[vod:link]" target="_blank"><img class="lazy" src="[vod:pic]" alt="[vod:name]"  title="[vod:name]"><div class="info"><i class="iconfont">&#xe622;</i></div></a><h3 class="mh3"><a href="[vod:link]" target="_blank">[vod:name]</a></h3></li>{/maccms:vod}
+</ul><ul class="star-r-m-list list-img"  id="con_mx_3">
+
+{maccms:vod num=2 order=desc by=hits type=2 start=5}
+<li class="imglist">
+<a href="[vod:link]" target="_blank"><img class="lazy" src="[vod:pic]" alt="[vod:name]"  title="[vod:name]"><div class="info"><i class="iconfont">&#xe622;</i></div></a><h3 class="mh3"><a href="[vod:link]" target="_blank">[vod:name]</a></h3></li>{/maccms:vod}
+
+</ul></div><div class="title ont"><h2>视频排行榜</h2><a href="#" target="_blank" class="more">更多<i class="iconfont">&#xe61f;</i></a></div><ul class="hot-list back-tab"><li class="hot1"><div class="hot1-img">
+{maccms:vod num=1 type=1 start=1 order=desc by=hits}
+<a href="[vod:link]" target="_blank"><img class="loading" src="{maccms:path_tpl}public/tpl/zpnew/images/pic.png"  data-original="[vod:pic]" alt="[vod:name]" title="[vod:name]"></a><span>1</span></div><div class="hot-txt"><h3><a href="[vod:link]" target="_blank">[vod:name]</a></h3><p><i>导演：</i>[vod:directed]</p><p><i>主演：</i>[vod:starring]</p><p><i>类型：</i>[vod:typename] </p><p><i>状态：</i>{if-A:[vod:state]<1}[vod:remarks]{elseif-A:[vod:state]<1000 and [vod:state]>0}第[vod:state]集{elseif-A:[vod:state]>1000}[vod:state]期{elseif-A:[vod:state]=0 and "[vod:remarks]"=""}大结局{else-A}{endif-A}</p></div></li>
+{/maccms:vod}
+{maccms:vod num=5 order=desc by=hits type=1 start=2}
+<li><span {if-A:[vod:numjoin] = 02 }class="cut"{endif-A}{if-A:[vod:numjoin] = 03 }class="cut"{endif-A}>[vod:numjoin]</span><a href="[vod:link]" target="_blank">[vod:name]</a><em class="cut">[vod:score] </em></li>
+{/maccms:vod}
+
+</ul></div><!--vod--end-->{maccms:foot}
