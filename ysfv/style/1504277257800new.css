@@ -1,0 +1,44 @@
+.p_tabnum {  
+    clear:both;  
+    padding:6px 0;  
+    text-align:center;  
+}  
+.p_tabnum li {  
+    display:inline-block;  
+    width:20px;  
+    height:2px;  
+    margin:0 4px;  
+    background:#e7e7e7;  
+}  
+.p_tabnum li.active {  
+    background:#d84054  
+}  
+.live_article {  
+    overflow:hidden;  
+    height:50vw;  
+    /*border:1px solid gray;  */
+}  
+.live_wrap>div {  
+    float:left;  
+    width:100%;  
+    position:relative  
+}  
+  
+  
+.page{  
+    position:relative;  
+    float:left;  
+}  
+.page  li{  
+    list-style-type:none;  
+    float:left;  
+    margin-left:15px;  
+    border:1px solid gray;  
+    width:15px;  
+}  
+li.active{  
+    background-color:gray;  
+}  
+.js_slideItem{
+    height:50vw;
+}

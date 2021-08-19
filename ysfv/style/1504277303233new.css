@@ -1,0 +1,425 @@
+body,ul,li,p,a {
+	padding:0;
+	margin:0;
+	border:0;
+	font-family: "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif !important;
+}
+a{
+	text-decoration: none;
+	-webkit-tap-highlight-color:transparent;
+}
+input[type=button], input[type=submit], input[type=file], button { cursor: pointer; -webkit-appearance: none; } 
+.divdykuai{
+	margin: 10px 0;
+	background: #fff;
+	border-top: 1px solid #f0f0f0;
+	border-bottom: 1px solid #f0f0f0;
+	overflow:hidden;
+}
+/*.dylist{
+	margin-top: 10px;
+}*/
+.dylist a{
+	/*background:red;*/
+	display: block;
+	height: 48vw;
+	float: left;
+	margin-bottom:6px; 
+	color: #999;
+	font-size: 14px;
+}
+.dylist a p{
+	line-height: 12px;
+}
+.dylist a img{
+	width: 100%;
+}
+.dylist a:nth-child(3n+1){
+	margin-right: 1%;
+	width: 32.5%;
+}
+.dylist a:nth-child(3n+2){
+	width: 33%;
+}
+.dylist a:nth-child(3n+0){
+	margin-left: 1%;
+	width: 32.5%;
+}
+.divdykuai .ktop{
+	height: 30px;
+	line-height: 26px;
+	font-size: 16px;
+}
+.divdykuai .ktop img{
+	width: 16px;
+	vertical-align: middle;
+	margin-left: 10px;
+}
+.divdykuai .ktop span{
+	float: right;
+	color: #666;
+	margin-right: 10px;
+	font-size: 14px;
+}
+/*分类筛选*/
+.shaixuan{
+	margin-top: 20px;
+	font-size: 16px;
+}
+.shaixuan ul{
+	overflow-x: auto;
+}
+.shaixuan ul li{
+	display:-webkit-box;
+	width: 100%;
+	height: 36px;
+	line-height: 36px;
+	white-space:nowrap;
+	background: #fff;
+	border-bottom: 1px solid #f0f0f0;
+	/*position: relative;*/
+	/*overflow:hidden;*/
+}
+.shaixuan ul li a{
+	/*flex: 1;*/
+	/*display: block;*/
+	/*float: left;*/
+	padding: 2px 4px;
+	margin: 2px;
+	color: #666;
+}
+.shaixuan ul li a.s{
+	color: #f25f55;
+}
+/*发现*/
+.divfxfl{
+	overflow: hidden;
+	padding:20px 0;
+	background: #fff;
+	margin-bottom: 30px;
+	border-top: 1px solid #eee;
+	border-bottom: 1px solid #eee;
+}
+.divfxfl a{
+	text-align: center;
+	/*background: #eee;*/
+	display:block;
+	float: left;
+	width: 25%;
+	margin: 5px 0;
+	color: #666;
+}
+.divfxfl a span{
+	display: block;
+}
+.divfxfl a em{
+	display: inline-block;
+	width: 40px;
+	height: 40px;
+	background: url(http://i0.letvimg.com/lc07_live/201709/01/22/34/1504276460389new.png);
+	background-size: 170px;
+}
+.divfxfl a em.pictj{
+	background-position: 0 0;
+}
+.divfxfl a em.picdy{
+	background-position: -41px 0;
+}
+.divfxfl a em.picdsj{
+	background-position: -84px 0;
+}
+.divfxfl a em.picdm{
+	background-position: -127px 0;
+}
+.divfxfl a em.piczy{
+	background-position: 0 -42px;
+}
+.divfxfl a em.piczx{
+	background-position: -41px -42px;
+}
+.divfxfl a em.picgx{
+	background-position: -84px -42px;
+}
+.divfxfl a em.picnx{
+	background-position: -127px -42px;
+}
+.divfxfl a em.picnx{
+	background-position: -127px -42px;
+}
+.divfxfl a em.picyl{
+	background-position: 0 -84px;
+}
+.divfxfl a em.picsh{
+	background-position: -41px -85px;
+}
+.divfxfl a em.picjs{
+	background-position: -84px -85px;
+}
+.divfxfl a em.pichd{
+	background-position: -127px -85px;
+}
+.divfxfl a em.piczt{
+	background-position: 0 -131px;
+}
+.divfxfl a em.picyg{
+	background-position: -41px -131px;
+}
+.divfxfl a em.picphb{
+	background-position: -84px -131px;
+}
+
+/*搜索*/
+#spic{
+	font-size: 12px;
+	color: #f0f0f0;
+	display: inline-block;
+	background: url(http://i2.letvimg.com/lc07_live/201709/01/22/34/1504276481809new.png) no-repeat 4px 4px;
+	background-size: 16px;
+	border: 1px solid #444;
+	height: 23px;
+	line-height: 23px;
+	padding: 0 4px 0 24px;
+	float: right;
+	margin:6px 5px 0 0;
+	border-radius: 3px;
+}
+#divsearch{
+	/*display: none;*/
+	background: #1b1a1f;
+	/*padding: 4px;*/
+}
+#divsearch form{
+	display: block;
+	width: 100%;
+}
+#searchword{
+	background: #323136 url(http://i0.letvimg.com/lc06_live/201709/01/22/34/1504276499753new.png) no-repeat 1px 3px;
+	background-size: 26px;
+	border: none;
+	padding: 6px 6px 6px 32px;
+	margin: 5px;
+	border-radius: 100px;
+	width: 80%;
+	color: #999;
+}
+#divsearch .imgbt{
+	background: #323136;
+	border-radius: 5px;
+	border: none;
+	color: #99999b;
+	width: 15%;
+	line-height: 26px;
+	width: 16%;
+	text-align: center;
+}
+/*搜索界面*/
+.div_sousuo_s{
+	/*width: 80%;*/
+	text-align: center;
+	padding:20px 0;
+}
+.div_sousuo_s [name="searchword"]{
+	border-radius: 100px;
+	padding: 5px 6px 5px 28px;
+	border: 2px solid #ddd;
+	background: #f0f0f0 url(http://i2.letvimg.com/lc07_live/201709/01/22/34/1504276481809new.png) no-repeat 4px 4px;
+	background-size: 20px;
+	box-shadow: 0 0 15px rgba(1,1,1,0.1) inset;
+}
+.div_sousuo_s [type="submit"]{
+	margin-left: 8px;
+	background: #f25f55;
+	color: #fff;
+	border: none;
+	line-height: 30px;
+	height: 30px;
+	border-radius: 3px;
+}
+.ssjgh4{
+	font-size: 14px;
+	color: #666;
+	font-weight: 900;
+	height: 30px;
+	line-height: 30px;
+}
+.ssjgh4 span{
+	font-weight: 900;
+	font-size: 14px;
+	color: #f25f55;
+}
+.ssjg{
+	padding: 2%;
+	margin:2px;
+	border: 1px solid #eee;
+}
+/*首页按钮图标*/
+.indexpic{
+	margin: 2px 3% 0 2% !important;
+	height: 26px;
+	width: 24px;
+	padding: 2px 3px 3px 6px !important;
+	display: inline-block;
+	float: left;
+	background: url(http://i0.letvimg.com/lc07_live/201709/01/22/31/1504276276781new.png) no-repeat 2px 2px;
+	background-size: 58px;
+	border-radius: 3px;
+}
+.indexpic2,#indexpic:active,#indexpic:hover{
+	margin: 2px 3% 0 2% !important;
+	height: 26px;
+	width: 24px;
+	padding: 2px 3px 3px 6px !important;
+	display: inline-block !important;
+	float: left;
+	background: #fff url(http://i0.letvimg.com/lc07_live/201709/01/22/31/1504276276781new.png) no-repeat -30px 1px !important;
+	background-size: 58px !important;
+	border-radius: 3px !important;
+}
+/*关注公众号*/
+#gzwx{
+	background: #fff;
+	display: block;
+	font-size: 18px;
+	color: #3cb034 !important;
+	text-align: center;
+	height: 46px;
+	line-height: 46px;
+	border: 1px solid #eee;
+	margin:5px 5px;
+	border-radius: 3px;
+}
+#gzwx img{
+	width: 26px;
+	vertical-align: middle;
+}
+#gzwx span{
+	font-size: 12px;
+}
+#gzwx:hover,#gzwx:active{
+	background: #f0f0f0 !important;
+}
+#hgb{
+	background: rgba(0,0,0,0.5);
+	position: fixed;
+	top: 0;left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 99;
+}
+#ewm{
+	width: 96%;
+	position: fixed;
+	top: 10%;
+	left: 2%;
+	z-index: 100;
+	box-shadow: 0 0 10px #444;
+}
+/*滑动刷新*/
+#show{
+    display:none;   
+}
+#pullDown{
+    background:#fff;
+    height:20px;
+    line-height:20px;
+    padding:3px 5px;
+    font-size:14px;
+    color:#bbb;
+    text-align: center;
+}
+#pullDown .pullDownIcon{
+    display:inline-block;/* float:left;*/
+    width:20px; height:20px; vertical-align: bottom; margin-right: 3px;
+    background:url("http://i1.letvimg.com/lc03_live/201709/01/22/33/1504276408320new.png") 0 0 no-repeat;
+    -webkit-background-size:40px 40px; background-size:20px 40px;
+    -webkit-transition-property:-webkit-transform;
+    -webkit-transition-duration:250ms;  
+}
+#pullDown .pullDownIcon {
+    -webkit-transform:rotate(0deg) translateZ(0);
+}
+#pullDown.flip .pullDownIcon {
+    -webkit-transform:rotate(-180deg) translateZ(0);
+}
+#pullDown.loading .pullDownIcon{
+    background-position:0 100%;
+    -webkit-transform:rotate(0deg) translateZ(0);
+    -webkit-transition-duration:0ms;
+
+    -webkit-animation-name:loading;
+    -webkit-animation-duration:2s;
+    -webkit-animation-iteration-count:infinite;
+    -webkit-animation-timing-function:linear;
+    display: inline-block;
+}
+
+@-webkit-keyframes loading {
+    from { -webkit-transform:rotate(0deg) translateZ(0); }
+    to { -webkit-transform:rotate(360deg) translateZ(0); }
+}
+/*分享*/
+ a.tiao{
+	display: block;
+	border: 1px solid #eee;
+	border-left: none;
+	border-right: none;
+	height: 52px;
+	line-height: 52px;
+	margin-bottom: 10px;
+	background: #fff;
+	font-size: 16px;
+	color: #000;
+}
+a.tiao span{
+	color: #aaa;
+	font-size: 12px;
+}
+a.tiao img{
+	width: 30px;
+	vertical-align: middle;
+	margin: 0 6px  0 10px;
+}
+#divqp{
+	display: none;
+	position: absolute;
+	top: 0;left: 0;
+	z-index: 100;
+	text-align: center;
+	overflow: auto;
+	background: #fff;
+  	height: 100%;
+}
+#divqp img{
+	width: 100%;
+    margin-bottom: 10%;
+}
+#divqp a{
+	font-size: 16px;
+	display: inline-block;
+	text-align: center;
+	color: #fff;
+	height: 40px;
+	line-height: 40px;
+	width: 80%;
+	border-radius: 6px;
+	background: #3cb034;
+	margin: 10px 0;
+}
+/*午夜*/
+#wy,#wy3{
+  display: inline-block;
+  position: relative;
+  top: -2px;
+  width: 28px;
+  height: 19px;
+  background-size: 86px;
+  vertical-align: middle;
+  border-radius: 100px;
+}
+.wy,.wy3{
+  background:url(http://i2.letvimg.com/lc02_live/201709/01/22/36/1504276564265new.png) no-repeat 9px 4px;
+}
+.wy2,.wy:active,.wy4,.wy4:active{
+  background:#fff url(http://i2.letvimg.com/lc02_live/201709/01/22/36/1504276564265new.png) no-repeat -47px 4px !important;
+  background-size: 86px !important;
+}

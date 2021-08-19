@@ -1,0 +1,72 @@
+  .i_caidan{
+			margin-top: 20px;
+		}
+		.i_caidan p{
+			text-align: center;
+			overflow: hidden;
+			display: flex;
+			justify-content:space-between;
+			align-items: center;
+		}
+		.i_caidan p:nth-child(1){
+			margin-bottom:18px;
+		}
+		.i_caidan p a{
+			font-size: 12px;
+			background: #fff;
+			color: #666;
+			overflow: hidden;
+			display: block;
+           flex:1;	
+			margin: 0.5% 0;
+			text-align: center;
+			float: left;
+
+			border-radius: 3px;
+			display: flex;
+		  flex-direction: column;
+		  align-items: center;
+		  justify-content: center;
+		}
+		.i_caidan p a:nth-child(1){
+			margin-left: 0;
+		}
+		.i_caidan p a:nth-child(3){
+			margin-right: 0;
+		}
+		.i_caidan p a span{
+			display: inline-block;
+             margin-top:4px;
+
+		}
+		.i_caidan p a img{
+			width:32px;
+			height:32px;
+			vertical-align:middle;
+		}
+		.i_caidan p a em{
+			display: inline-block;
+			width: 32px;height: 32px;
+			background: url(../image/1510033609186new.png) no-repeat;
+			background-size: 32px;
+			margin: 0 2px 0 8%;	
+			float: left;
+		}
+		.i_caidan p a em.dy{
+			background-position: 0 1px;
+		}
+		.i_caidan p a em.dsj{
+			background-position: 0 -34px;
+		}
+		.i_caidan p a em.dm{
+			background-position: 0 -70px;
+		}
+		.i_caidan p a em.zy{
+			background-position: 0 -105px;
+		}
+		.i_caidan p a em.jh{
+			background-position: 0 -140px;
+		}
+		.i_caidan p a em.wj{
+			background-position: 0 -176px;
+		}
